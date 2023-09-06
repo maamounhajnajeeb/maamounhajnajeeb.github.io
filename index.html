@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" class="no-flexbox">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Maamoun Haj Najeeb </title>
+    <link rel="stylesheet" href="./index.css" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=Jomhuria&family=Knewave&family=Open+Sans:ital,wght@1,300&family=Pattaya&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <nav>
+        <h2>Maamoun Haj Najeeb</h2>
+
+        <div class="items">
+        
+            <a href="#summary">Summary</a>
+
+            <a href="#projects">Projects</a>
+
+            <a href="#coding-challenges">Code Challenges</a>
+            
+            <a href="#technologies">Technologies</a>
+
+            <a href="#contact">Contact</a>
+        
+        </div>
+
+    </nav>
+
+    <section class="summary" id="summary">
+
+        <div class="summary-box">
+
+            <h3>Hey! I am Maamoun Haj Najeeb</h3>
+            <span class="junior">Junior Backend Developer</span>
+            <p>
+                I am Django self-taught developer and YouTube content creator.
+            </p>
+            <p>
+                I really love deep diving in computer science concepts,
+            </p>
+            <p>
+                solving problems and share my results with others.
+            </p>
+    
+        </div>
+
+        <img src="./images/personal_image.jpg" width="350px" height="350px" />
+    
+    </section>
+
+    <h2 class="my-projects">Projects Section</h2>
+
+    <section class="projects" id="projects">
+        
+        <div class="project">
+            <h3>Tic Tac Toe</h3>
+            <p>When I start learning JavaScript, I tried to</p>
+            <p>Apply my knowledge with some kind of simple projects,</p>
+            <p>Tic Tac Toe was one of them</p>
+            <p>You can see it from <a href="https://maamounhajnajeeb.github.io/tic-tac-toe/">here</a></p>
+
+            <image src="./images/projects/tic_tac_toe.png" width="269px" height="350px"/>
+        </div>
+
+        <div class="project-github">
+            <h3>and many others...</h3>
+            <p>There are many projects</p>
+            <p>(Backend projects and APIs) in my github repos</p>
+            <p>
+                So, take a look 
+                <a href="https://github.com/maamounhajnajeeb?tab=repositories">link</a>
+            </p>
+            
+        </div>
+
+    </section>
+
+    <section class="coding-challenges" id="coding-challenges">
+
+        <div class="code-entry">
+            <h2>Code Challenges</h2>
+            <p>I have more than 130 soved problems on my leetcode 
+                <a href="https://leetcode.com/maamounhn/">account</a>
+            </p>
+            <p>You can see my problem solving repo from
+                <a href="https://github.com/maamounhajnajeeb/Problem-Solving-Repo">here</a>
+            </p>
+        </div>
+
+        <div class="problem-head">
+
+            <div class="pointer">
+
+                <span class="before-span"></span>
+
+                <div class="problem-1">Valid Parenthesis - leetcode #20</div>
+
+                <span class="after-span"></span>
+
+            </div>
+
+            <div class="schema-1" style="display: none;">
+
+                <div class="matter">
+                    <span class="problem-span">Problem:</span>
+                    <p>Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', Determine if the input string is valid.</p>
+                    An input string is valid if:
+                    <ul>
+                        <li>Open brackets must be closed by the same type of brackets.</li>
+                        <li>Open brackets must be closed in the correct order.</li>
+                        <li>Every close bracket has a corresponding open bracket of the same type.</li>
+                    </ul>
+                </div>
+
+                <div class="concept">
+
+                    <div id="concept">
+                        <br />
+                        <br />
+                        <span class="concept-span">Concept:</span>
+                        <br />
+                        <br />
+                        Ok, so we have some parentheses which open and close frequently, maybe we have two open parentheses then one closing parentheses
+                        and we have to Determine if each of these open parentheses closed correctly, so absolutely we have stack
+                    </div>
+
+                </div>
+
+                <div class="solution">
+                    <br />
+                    <br />
+                    <span class="solution-span">Solution:</span>
+                    <br />
+                    <br />
+                    Our stack elements is so limited (there are only three types of elements: {[()]} ) which is an advantage
+                    We put opened parentheses in set and closed parentheses with it's open parentheses in dict for a reason 
+                    We're going to loop through each parenthes in the string "s" and make the next conditions:
+                    <ol>
+                        <li>parenthes is open and we append it to the stack directly</li>
+                        <li>after we validate that if the parenthes is open in past condition, now there is close Parentheses only so, we return <span class="text-danger">False</span> if the stack is empyt or the parenthes type of the last element in stack is not same type for this parenthes</li>
+                        <li>last condition: it's closing parentheses and it's type equalt to the last stack parenthes type so we pop</li>
+                    </ol>
+                    <span class="text-warning">now</span> after the loop ends we return <span class="text-primary">True</span> if it's empty, else we will return <span class="text-danger">False</span>.
+                
+                </div>
+
+                <div class="code">
+                    <br />
+                    You can see the code from 
+                    <a href="https://github.com/maamounhajnajeeb/Problem-Solving-Repo/blob/main/LeetCode/problem%230020.py">
+                        here
+                    </a> 
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="problem-head">
+
+            <div class="pointer">
+
+                <span class="before-span"></span>
+
+                <div class="problem-2">Design Parking System -leetcode #1603</div>
+
+                <span class="after-span"></span>
+
+            </div>
+
+            <div class="schema-2" style="display: none;">
+
+                <div class="matter">
+                    <br />
+                    <span class="problem-span">Problem:</span>
+                    <p>Design a parking system for a parking lot. The parking lot has three kinds of parking spaces: big, medium, and small, with a fixed number of slots for each size.</p>
+                    Implement the <span class="text-muted bg-light">ParkingSystem</span> class:
+                    <ul>
+                        <li>
+                            <span class="text-muted bg-light">ParkingSystem(int big, int medium, int small)</span>
+                            Initializes object of the <span class="text-muted bg-light">ParkingSystem</span> class.
+                            The number of slots for each parking space are given as part of the constructor.
+                        </li>
+                        <li>
+                            <span class="text-muted bg-light">bool addCar(int carType)</span>
+                            Checks whether there is a parking space of
+                            <span class="text-muted bg-light">carType</span>
+                            for the car that wants to get into the parking lot. 
+                            <span class="text-muted bg-light">carType</span>
+                            can be of three kinds: big, medium,or small, which are represented by 
+                            <span class="text-muted bg-light">1</span>, 
+                            <span class="text-muted bg-light">2</span>,
+                            and <span class="text-muted bg-light">3</span> respectively. 
+                            A car can only park in a 
+                            parking space of its <span class="text-muted bg-light">carType</span>.
+                            If there is no space available, return 
+                            <span class="text-muted bg-light">false</span>, else park 
+                            the car in that size space and return true.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="concept">
+                    <span class="concept-span">Concept:</span>
+                    <br /><br />
+                    We have to define a Python Dictionary (Hash-Table) in the main constructer 
+                    <span class="muted-span">(__init__)</span> method that holds three parking sizes: 
+                    {small, medium, big} and number of available places for each size.
+                    <br /><br /><br />
+                </div>
+
+                <div class="solution">
+                    <span class="solution-span">Solution:</span>
+                    <br /><br />
+                    After we defined the Dictionary we try to figure if the given size still has an available place
+                    via <span class="text-muted bg-light">if</span> statement, if there is place we decrease the number
+                    of places by 1 and return
+                </div>
+
+                <div class="code">
+                    <br />
+                    You can see the code from 
+                    <a href="https://github.com/maamounhajnajeeb/Problem-Solving-Repo/blob/main/LeetCode/problem%231603.py">
+                        here
+                    </a> 
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="problem-head">
+
+            <div class="pointer">
+
+                <span class="before-span"></span>
+
+                <div class="problem-3">Equal Row and Column Pairs - leetcode #2352</div>
+
+                <span class="after-span"></span>
+
+            </div>
+
+            <div class="schema-3" style="display: none;">
+
+                <div class="matter">
+
+                    <br />
+                    <span class="problem-span">Problem:</span>
+                    <p>
+                        Given a 0-indexed <span class="muted-span">n x n</span>
+                        integer matrix <span class="muted-span">grid</span>, 
+                        return the number of pairs <span class="muted-span">(ri, cj) </span>
+                        such that row <span class="muted-span">ri </span>and column 
+                        <span class="muted-span">cj</span> are equal.
+                        A row and column pair is considered equal if they contain the same elements
+                        in the same order (i.e., an equal array).
+                    </p>
+
+                </div>
+
+                <div class="concept">
+
+                    <span class="concept-span">Concept:</span>
+                    <br /><br />
+                    We have to loop through each column and row and compare between them,
+                    we should use hashtable to record the column result so we don't have to
+                    refind the column items each time we land on it through looping.
+
+                </div>
+
+                <div class="solution">
+                    <br /><br />
+                    <span class="solution-span">Solution:</span>
+                    <br /><br />
+                    first, we loop over each row and we loop over each item in this row,
+                    item index playing column index role, we check if column index is in the hashtable,
+                    if not we make a list of items in this column and save it in the hashtable.
+                    finaly we compare between row and column, if they are identical we increase the counter 
+                    by 1, else counter stay on it's status and we go to the next column.
+                    <br />
+                </div>
+
+                <div class="code">
+                    <br />
+                    You can see the code from 
+                    <a href="https://github.com/maamounhajnajeeb/Problem-Solving-Repo/blob/main/LeetCode/problem%232352.py">
+                        here
+                    </a> 
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="technologies" id="technologies">
+
+        <h2 class="technologies-header">Technologies</h2>
+
+        <div class="technologies-images">
+            <img src="./images/back/Python.png" />
+            <img src="./images/back/Django.png" />
+            <img src="./images/back/rest_framework.png">
+            <img src="./images/back/Postgres.png" />
+            <img src="./images/front/HTML5.png" />
+            <img src="./images/front/CSS3.png" />
+            <img src="./images/front/javascript.png" />
+            <img src="./images/version_control/Git_&_GitHub.png" />
+        </div>
+
+    </section>
+
+    <footer id="contact">
+
+        <h3>Contact</h3>
+
+        <div class="footer">
+
+            <div>
+                Phone Number: +963932715313
+            </div>
+
+            <div>
+                Email: maamoun.haj.najeeb@gmail.com
+            </div>
+
+            <div>
+                <a href="./Maamoun_Haj_Najeeb.pdf">CV</a>
+            </div>
+
+            <div>
+                <a href="https://www.linkedin.com/in/maamoun-hajnajeeb/">Linked-In</a>
+            </div>
+
+            <div>
+                <a href="https://github.com/maamounhajnajeeb">Git-Hub</a>
+            </div>
+            
+            <div>
+                <a href="https://www.youtube.com/@themagicofcomputerscience3270">YouTube</a>
+            </div>
+
+            <div>
+                <a href="https://www.facebook.com/almoalmmaamoun">Facebook</a>
+            </div>
+
+            <div>
+                <a href="https://wa.me/963932715313">Whats App</a>
+            </div>
+
+            <div>
+                <a href="https://t.me/maamoun391">Telegram</a>
+            </div>
+
+        </div>
+
+    </footer>
+<script src="./index.js"></script>
+</body>
+</html>
