@@ -66,7 +66,6 @@ a {
 .about-section {
     display: flex;
     flex-direction: row;
-    /* flex-wrap: wrap; */
     justify-content: space-evenly;
     align-items: flex-start;
 }
@@ -76,7 +75,7 @@ h2 {
 }
 
 .about {
-    width: 40%;
+    width: 42%;
 }
 
 .about h2::after {
@@ -121,6 +120,7 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    width: 83%;
 }
 
 .projects {
@@ -131,9 +131,9 @@ h2 {
     align-items: flex-start;
 }
 
-.backend-projects {
+/* .backend-projects {
     width: 770px;
-}
+} */
 
 .backend-projects, .fontend-projects {
     display: flex;
@@ -219,13 +219,31 @@ h2 {
     align-items: center;
 }
 
+@media (max-width: 1060px) {
+    .technologies h2::after {
+        width: 260px;
+    }
+
+    .about {
+        width: 48%;
+    }
+}
+
 @media (max-width: 975px) {
     .technologies {
         width: 35%;
     }
+
+    .projects-section {
+        width: 88%;
+    }
+
 }
 
 @media (max-width: 890px) {
+    .technologies h2::after {
+        width: 370px;
+    }
     .about-section {
         flex-wrap: wrap;
         justify-content: space-evenly;
@@ -235,6 +253,13 @@ h2 {
     }
     .about {
         width: 90%;
+    }
+    .projects-section {
+        width: 90%;
+    }
+    .item {
+        width: 45%;
+        margin: 1%;
     }
 }
 
@@ -247,6 +272,12 @@ h2 {
     }
 }
 
+@media (max-width: 800px) {
+    .about, .technologies {
+        width: 93%;
+    }
+}
+
 @media (max-width: 700px) {
     .home-section {
         justify-content: center;
@@ -256,5 +287,16 @@ h2 {
     }
     .contact-icon {
         font-size: 12px;
+    }
+
+    .projects-section {
+        width: 92%;
+    }
+    .item {
+        width: 100%;
+        margin: 1% 0;
+    }
+    .backend-items, .frontend-items {
+        justify-content: center;
     }
 }
