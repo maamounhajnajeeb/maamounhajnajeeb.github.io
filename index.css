@@ -1,0 +1,260 @@
+* {
+    background-color: #fdb44b;
+    font-size: 20px;
+    color: #eee;
+}
+
+a {
+    text-decoration: none;
+}
+
+.home-img {
+    border-radius: 10px;
+}
+
+.main-div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.talk {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-icons {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-icons div {
+    margin-bottom: 2.5%;
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+}
+
+.email-address {
+    margin-left: 1%;
+}
+
+.little-words {
+    color: #240747;
+    font-size: 18px;
+}
+
+.main-name {
+    color: #cd4545;
+    font-weight: bold;
+}
+
+/* about section */
+.about-section {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+h2 {
+    color: #240748;
+}
+
+.about {
+    width: 40%;
+}
+
+.about h2::after {
+    content: '';
+    width: 100px;
+    height: 10px;
+    color: black;
+    border-bottom: 5px solid #cd4545;
+    display: block;
+}
+
+.technologies h2::after {
+    content: '';
+    width: 370px;
+    height: 10px;
+    color: black;
+    border-bottom: 5px solid #cd4545;
+    display: block;
+}
+
+.technologies {
+    width: 32%;
+}
+
+.technologies-icons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* projects section */
+.projects-section h2::after {
+    content: '';
+    width: 80px;
+    height: 10px;
+    color: black;
+    border-bottom: 5px solid #cd4545;
+    display: block;
+}
+
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.backend-projects {
+    width: 770px;
+}
+
+.backend-projects, .fontend-projects {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.backend-projects .title, .frontend-projects .title {
+    color: #cd4545;
+    font-weight: 600;
+}
+
+.backend-items, .frontend-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.frontend-items, .item {
+    width: 90%;
+}
+
+.item {
+    width: 30%;
+    height: auto;
+    padding: 1%;
+    text-align: start;
+    border-radius: 10px;
+    border: 2px solid #cd4545;
+    
+    background-color: #ffcc6d;
+}
+
+.item .clicks a, .item a {
+    background-color: #ffcc6d;
+    border-radius: 2px;
+    border: 1px solid #cd4545;
+    padding: 3px;
+    color: #111e63;
+}
+
+.item a {
+    border: none;
+}
+
+.item .clicks a:hover,  .item a:hover {
+    background-color: #cd4545;
+    color: #ffcc6d;
+}
+
+.item .clicks {
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+}
+
+.item h3, .item div {
+    font-size: 18px;
+    background-color: inherit;
+    color: #240748;
+}
+
+.item p, .item div a {
+    font-size: 17px;
+    background-color: inherit;
+    color: #066941;
+}
+
+.padd-5 {
+    padding: 0 5px;
+}
+
+/* certificates-section */
+.certificates-section {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+@media (max-width: 975px) {
+    .technologies {
+        width: 35%;
+    }
+}
+
+@media (max-width: 890px) {
+    .about-section {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .technologies {
+        width: 90%;
+    }
+    .about {
+        width: 90%;
+    }
+}
+
+@media (max-width: 500px) {
+    .technologies {
+        width: 95%;
+    }
+    .about {
+        width: 90%;
+    }
+}
+
+@media (max-width: 700px) {
+    .home-section {
+        justify-content: center;
+    }
+    .talk {
+        width: 85%;
+    }
+    .contact-icon {
+        font-size: 12px;
+    }
+}
