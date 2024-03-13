@@ -70,7 +70,7 @@ a {
     align-items: flex-start;
 }
 
-h2 {
+h2, .school-title {
     color: #240748;
 }
 
@@ -106,7 +106,10 @@ h2 {
 }
 
 /* projects section */
-.projects-section h2::after {
+.projects-section h2::after
+, .experience .experience-keyword::after
+, .education-section h2::after
+, .certificates-section h2::after {
     content: '';
     width: 80px;
     height: 10px;
@@ -131,11 +134,7 @@ h2 {
     align-items: flex-start;
 }
 
-/* .backend-projects {
-    width: 770px;
-} */
-
-.backend-projects, .fontend-projects {
+.backend-projects, .frontend-projects {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -157,12 +156,7 @@ h2 {
     width: 100%;
 }
 
-.frontend-items, .item {
-    width: 90%;
-}
-
 .item {
-    width: 30%;
     height: auto;
     padding: 1%;
     text-align: start;
@@ -170,6 +164,10 @@ h2 {
     border: 2px solid #cd4545;
     
     background-color: #ffcc6d;
+}
+
+.backend-items .item {
+    width: 30%;
 }
 
 .item .clicks a, .item a {
@@ -211,14 +209,122 @@ h2 {
     padding: 0 5px;
 }
 
-/* certificates-section */
-.certificates-section {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    align-items: center;
+
+/* experience section */
+.experience {
+    width: 83%;
 }
 
+.experience .experience-keyword::after {
+    width: 105px;
+}
+
+.experience-section, .education-items {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.experience-section .experience-item
+, .education-items .education-item {
+    background-color: #ffcc6d;
+    border: 2px solid #cd4545;
+    border-radius: 10px;
+    width: 31%;
+    
+}
+
+.experience-section .experience-item:hover
+, .education-items .education-item:hover
+, .backend-items .item:hover
+, .frontend-items .item:hover {
+    border-color: #006eff;
+}
+
+.experience-section .experience-item *
+, .education-items .education-item * {
+    margin: 0.8%;
+    background-color: inherit;
+}
+
+.experience-section .experience-item h2
+, .experience-section .experience-item p
+, .education-items .education-item p
+, .education-items .education-item h2 {
+    margin-left: 1.5%;
+}
+
+.job-date, .job-location, .school-date, .school-location {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.job-description, .school-description {
+    color:#066941;
+    font-size: 17px;
+}
+
+.job-date span, .job-location span
+, .school-date span, .school-location span {
+    font-size: 15px;
+}
+
+.job-date span, .school-date span {
+    color: black;
+}
+
+.job-location span, .school-location span {
+    color: #240747;
+}
+
+/* education section */
+.education-section {
+    width: 83%;
+}
+.education-section h2::after {
+    width: 98px;
+}
+
+.education-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.school-description {
+    color: #933600;
+} 
+
+/* certificates-section */
+.certificates-section h2::after {
+    width: 108px;
+}
+
+.certificates-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.certificate-items {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+/* media queries */
 @media (max-width: 1060px) {
     .technologies h2::after {
         width: 260px;
@@ -234,10 +340,9 @@ h2 {
         width: 35%;
     }
 
-    .projects-section {
+    .projects-section, .experience, .education-section {
         width: 88%;
     }
-
 }
 
 @media (max-width: 890px) {
@@ -248,16 +353,11 @@ h2 {
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
-    .technologies {
+    .about, .projects-section, .technologies {
         width: 90%;
     }
-    .about {
-        width: 90%;
-    }
-    .projects-section {
-        width: 90%;
-    }
-    .item {
+    .backend-items .item, .experience-section .experience-item
+    , .education-section .education-items .education-item {
         width: 45%;
         margin: 1%;
     }
@@ -269,6 +369,10 @@ h2 {
     }
     .about {
         width: 90%;
+    }
+
+    .education-section .experience {
+        width: 99%;
     }
 }
 
@@ -289,14 +393,25 @@ h2 {
         font-size: 12px;
     }
 
-    .projects-section {
+    .projects-section, .experience, .education-section {
         width: 92%;
     }
-    .item {
+    .backend-items .item, .experience-section .experience-item
+    , .education-section .education-items .education-item {
         width: 100%;
         margin: 1% 0;
     }
     .backend-items, .frontend-items {
         justify-content: center;
+    }
+}
+
+@media (max-width: 409px) {
+    .technologies h2::after {
+        width: 260px;
+    }
+
+    .job-title, .school-title {
+        font-size: 19px;
     }
 }
