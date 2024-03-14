@@ -482,7 +482,7 @@ h2, .school-title {
 
 @media (max-width: 550px) {
     .certificate-item {
-        width: 90%;
+        width: 100%;
     }
     .certificate-item img {
         width: 380px;
