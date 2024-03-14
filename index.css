@@ -313,14 +313,69 @@ h2, .school-title {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+
+    width: 83%;
 }
 
 .certificate-items {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
+    
+    gap: 0.5%;
+}
+
+.certificate-item {
+    width: 30%;
+}
+
+.certificate-item img {
+    width: 280px;
+    height: 216px;
+}
+
+.certificate-item:hover > img {
+    border: 1px solid #006eff;
+    box-sizing: border-box;
+}
+
+.certificate-item:hover > .certificate-info a {
+    color: #006eff;
+}
+
+.certificate-info {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* books section */
+.books-section {
+    width: 98%;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.books-section h2::after {
+    width: 63px;
+}
+
+.books-items {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.books-items img {
+    width: 32%;
 }
 
 
@@ -333,6 +388,15 @@ h2, .school-title {
     .about {
         width: 48%;
     }
+
+    .certificate-item {
+        width: 48%;
+    }
+
+    .certificate-item img {
+        width: 350px;
+        height: 271px;
+    }
 }
 
 @media (max-width: 975px) {
@@ -342,6 +406,11 @@ h2, .school-title {
 
     .projects-section, .experience, .education-section {
         width: 88%;
+    }
+
+    .certificate-item img {
+        width: 350px;
+        height: 271px;
     }
 }
 
@@ -361,24 +430,21 @@ h2, .school-title {
         width: 45%;
         margin: 1%;
     }
-}
 
-@media (max-width: 500px) {
-    .technologies {
-        width: 95%;
-    }
-    .about {
-        width: 90%;
-    }
-
-    .education-section .experience {
-        width: 99%;
+    .certificate-item img {
+        width: 300px;
+        height: 247px;
     }
 }
 
 @media (max-width: 800px) {
-    .about, .technologies {
+    .about, .technologies, .certificates-section, .books-section {
         width: 93%;
+    }
+
+    .certificate-item img {
+        width: 250px;
+        height: 193px;
     }
 }
 
@@ -404,7 +470,48 @@ h2, .school-title {
     .backend-items, .frontend-items {
         justify-content: center;
     }
+
+    .books-section {
+        width: 100%;
+    }
+    .books-items img {
+        width: 45%;
+        margin-bottom: 3%;
+    }
 }
+
+@media (max-width: 550px) {
+    .certificate-item {
+        width: 90%;
+    }
+    .certificate-item img {
+        width: 380px;
+        height: 294px;
+    }
+}
+
+@media (max-width: 500px) {
+    .technologies {
+        width: 95%;
+    }
+    .about {
+        width: 90%;
+    }
+
+    .education-section .experience {
+        width: 99%;
+    }
+
+    .certificate-item img {
+        width: 355px;
+        height: 275px;
+    }
+
+    .books-section, .books-items img {
+        width: 100%;
+    }
+}
+
 
 @media (max-width: 409px) {
     .technologies h2::after {
@@ -413,5 +520,10 @@ h2, .school-title {
 
     .job-title, .school-title {
         font-size: 19px;
+    }
+
+    .certificate-item img {
+        width: 330px;
+        height: 250px;
     }
 }
