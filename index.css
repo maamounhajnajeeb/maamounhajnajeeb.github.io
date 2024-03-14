@@ -378,6 +378,19 @@ h2, .school-title {
     width: 32%;
 }
 
+/* YouTube Section */
+.youtube-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.youtube-section iframe {
+    width: 560px;
+    height: 315px;
+}
 
 /* media queries */
 @media (max-width: 1060px) {
@@ -480,6 +493,13 @@ h2, .school-title {
     }
 }
 
+@media (max-width: 650px) {
+    .youtube-section iframe {
+        width: 498px;
+        height: 280px;
+    }
+}
+
 @media (max-width: 550px) {
     .certificate-item {
         width: 80%;
@@ -487,6 +507,11 @@ h2, .school-title {
     .certificate-item img {
         width: 380px;
         height: 294px;
+    }
+
+    .youtube-section iframe {
+        width: 427px;
+        height: 240px;
     }
 }
 
@@ -510,6 +535,11 @@ h2, .school-title {
     .books-section, .books-items img {
         width: 100%;
     }
+
+    .youtube-section iframe {
+        width: 338px;
+        height: 190px;
+    }
 }
 
 
@@ -525,5 +555,10 @@ h2, .school-title {
     .certificate-item img {
         width: 310px;
         height: 240px;
+    }
+
+    .youtube-section iframe {
+        width: 302px;
+        height: 170px;
     }
 }
