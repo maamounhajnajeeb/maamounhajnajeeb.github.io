@@ -147,7 +147,7 @@ h2, .school-title {
     font-weight: 600;
 }
 
-.backend-items, .frontend-items {
+.backend-items, .frontend-items, .certificate-item {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -156,7 +156,7 @@ h2, .school-title {
     width: 100%;
 }
 
-.item {
+.item, .certificate {
     height: auto;
     padding: 1%;
     text-align: start;
@@ -164,6 +164,10 @@ h2, .school-title {
     border: 2px solid #cd4545;
     
     background-color: #ffcc6d;
+}
+
+.certificate {
+    padding: 2%;
 }
 
 .backend-items .item {
@@ -182,7 +186,7 @@ h2, .school-title {
     border: none;
 }
 
-.item .clicks a:hover,  .item a:hover {
+.item .clicks a:hover,  .item a:hover{
     background-color: #cd4545;
     color: #ffcc6d;
 }
@@ -298,13 +302,17 @@ h2, .school-title {
     align-items: flex-start;
 }
 
-.school-description {
+/* .school-description {
     color: #933600;
-} 
+}  */
 
 /* certificates-section */
 .certificates-section h2::after {
     width: 108px;
+}
+
+.certificates-full-version{
+    color: #043d26;
 }
 
 .certificates-section {
@@ -480,7 +488,7 @@ h2, .school-title {
         width: 100%;
         margin: 1% 0;
     }
-    .backend-items, .frontend-items {
+    .backend-items, .frontend-items, .certificate-item {
         justify-content: center;
     }
 
